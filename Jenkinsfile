@@ -3,8 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = '2006abhii91/exp'
-        // Note: Make sure DOCKER_TAG is defined somewhere, or add it here:
-        // DOCKER_TAG = 'latest'
+ 
     }
     
     stages {
@@ -28,7 +27,7 @@ pipeline {
                     usernameVariable: 'DOCKER_USERNAME',
                     passwordVariable: 'DOCKER_PASSWORD'
                 )]) {
-                    bat 'echo %DOCKER_PASSWORD%|docker login -u 2006abhii91 --password-stdin'
+                    bat  'echo docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%'
                 }
             }
         }
