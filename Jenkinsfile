@@ -4,7 +4,7 @@ pipeline {
         stage('clone') 
         {
             steps {
-                git branch: 'main', url: 'https://github.com/2006abhii91-bit/StudentPortalCI.git'
+                git branch: 'master', url: 'https://github.com/2006abhii91-bit/StudentPortalCI.git'
             }
         }
         stage('build') 
