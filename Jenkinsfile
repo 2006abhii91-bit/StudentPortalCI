@@ -21,7 +21,7 @@ pipeline {
                 (credentialsId: 'DOCKEHUB_PAT',
                  usernameVariable: 'DOCKER_USERNAME',
                   passwordVariable: 'DOCKER_PASSWORD')]) 
-                bat 'echo %DOCKER_PASSWORD%|docker login -u %DOCKER_USERNAME% --password-stdin'
+                bat 'echo %DOCKER_PAT%|docker login -u 2006abhii91 --password-stdin'
                 
                
             }
