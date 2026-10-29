@@ -22,10 +22,10 @@ pipeline {
         stage('login')
         {
             steps {
-                withCredentials[(usernamePassword
+                withCredentials([usernamePassword
                 (CredentialsId: 'DOCKEHUB_PAT',
                  usernameVariable: 'DOCKER_USERNAME',
-                  passwordVariable: 'DOCKER_PASSWORD'))] 
+                  passwordVariable: 'DOCKER_PASSWORD')]) 
                 bat 'echo %DOCKER_PASSWORD%|docker login -u 2006abhii91 --password-stdin'
                 
                
