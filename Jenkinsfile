@@ -2,8 +2,8 @@ pipeline {
     agent any
 
      environment {
-        DOCKER_IMAGE = '2006abhii91/exp',
-        DOCKER_TAG = 'student-portal:v2'
+        DOCKER_IMAGE = '2006abhii91/exp'
+       
     }
     stages {
         stage('clone') 
